@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>utilitworx</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a onClick="createJSON()">SAVE</a></li>
+          <li><a href="#">CANCEL</a></li>
+          <li><a href="#">PREVIEW</a></li>
+        </ul>
+        <h3 class="text-muted">utilitworx</h3>
+      </div>
+      <!-- main content -->
+          <div id="content">
+          </div>
+          <div class="container" >
+            <div class="left-container"  ondragenter="return dragEnter(event)"
+            ondrop="return dragDrop(event)"
+            ondragover="return dragOver(event)">
+            <!-- <div id="projectLocation">Banglore</div>
+            <div id ="owner">CognitiveClouds</div>
+            <div id="address">Ksrtc Layout</div>
+            <div id="state">Karnataka</div>
+            <div id="phone">9499444429</div> -->
+            </div>
+          </div>
+
+          <!-- sidebar -->
+          <div id="sidebar">
+            <div class="input-group" style="">
+            <form>
+             <input type="text" id="drag1" class="tb"  placeholder="TextBox" draggable="true"
+            ondragstart="dragStart(event)" onmousedown="get_pos(event)">
+            <br>
+            <div>
+             <input type="checkbox" id="drag2" class="cb" draggable="true"
+            ondragstart="dragStart(event)" onmousedown="get_pos(event)"> Check Box
+            </div>
+            <br>
+            <div class="radiobutton">
+             <input type="radio"  id="drag3" class="rb"  draggable="true"
+            ondragstart="dragStart(event)" onmousedown="get_pos(event)"> Radio Button
+            </div>
+            <br>
+             <textarea rows="3" id="drag4" class="ta" placeholder="TextArea" draggable="true"
+            ondragstart="dragStart(event)" onmousedown="get_pos(event)"></textarea>
+            </form>
+            </div>
+
+            <br>
+            <div class= "annotate">
+            <lable>Lable :</lable>
+            <input type="text" title="lable" class="lable" placeholder="TextBox">
+            <br>
+            <lable>Placeholder :</lable>
+            <input type="text" title="placeholder"  class="placeholder" placeholder="TextBox">
+            <br>
+           <lable>Description :</lable>
+            <input type="text" title="description" class="descrptn" placeholder="TextBox">
+            <br>
+          <lable>Type :</lable>
+            <select class="dropdown-type">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+          </select>
+          <br>
+          <lable>Default Value (Optional) :</lable>
+            <select class="dropdown-default">
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+          </select>
+          <br>
+          <lable>Sample Data :</lable>
+            <input type="text" title="sampledata" class="sampledata" placeholder="TextBox">
+            <br>
+          <lable>Mandatory Field :</lable>
+          <input type="checkbox" class=" mancheck">
+          </div>
+      <div>
+    </div>
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap/js/affix.js"></script>
+    <script src="/bower_components/bootstrap/js/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/transition.js"></script>
+    <script src="/bower_components/bootstrap/js/button.js"></script>
+    <script src="/bower_components/bootstrap/js/popover.js"></script>
+    <script src="/bower_components/bootstrap/js/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/tab.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="scripts/jquery.ezdz.js"></script>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
