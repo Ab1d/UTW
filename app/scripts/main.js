@@ -17,21 +17,24 @@
 
  function get_pos(ev){
            pos = [ev.pageX, ev.pageY];
-           // console.log(pos[0]+"px");
+           console.log(pos[0]+":"+pos[1]);
 }
 
-            var dynamicId = 0;
+ var dynamicId = 0;
+ var left=0;
+ var right= 0;
  function dragDrop(ev) {
             var src = ev.dataTransfer.getData("Text");
             var nodeCopy = document.getElementById(src).cloneNode(true);
             dynamicId++;
             nodeCopy.id = dynamicId;
             ev.target.appendChild(nodeCopy);
-            var left = ev.offsetX + "px";
-            var right = ev.offsetY+"px";
+            left = ev.offsetX + "px";
+            right = ev.offsetY+"px";
             $("#" + dynamicId).css("position","absolute");
             $("#" + dynamicId).css("left",left);
             $("#" + dynamicId).css("top",right);
+            $("#" + dynamicId).removeProp("draggable");
             ev.stopPropagation();
             $(".annotate").show();
             return false;
@@ -44,7 +47,7 @@ var pos;
 var jsonObj = [];
 function createJSON() {
    var jsonObj = [];
-    $('#drag1').each(function() {
+    $('#'+dynamicId).each(function() {
 
         var lable = $(".lable").val();
         var palceholder = $(".placeholder").val();
@@ -54,6 +57,9 @@ function createJSON() {
         var sampleData = $(".sampledata").val();
         var mandatoryCheck = $(".mancheck").is(':checked');
         var item = {}
+        item ["id"] = dynamicId;
+        item ["elementPos-X"] = left;
+        item ["elementPos-Y"] = right;
         item ["lable"] =lable;
         item ["palceholder"] = palceholder;
         item ["description"] = description;
