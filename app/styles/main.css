@@ -72,32 +72,44 @@ body {
   position: absolute;
 }
 .annotate{
-border:1px solid #000000;
+  border:1px solid #000000;
+  display:block;
+  padding:20px;
+}
+.input-group{
+  display:block;
+  margin :20px;
 }
 
 #sidebar {
-    position:relative;
-    float:right;
-    top:0; bottom:0;
-    text-align: left;
-    width:300px;
-    height:850px;
-    background:#f5f5f5;
+  position:relative;
+  float:right;
+  top:0; bottom:0;
+  text-align: left;
+  width:300px;
+  height:850px;
+  background:#f5f5f5;
+}
+.form-textbox{
+  resize:horizontal;
 }
 .tb, .ta, .radiobutton, .annotate{
   display:block;
 }
-
-.annotate{
-  display:block;
-  margin:0 auto;
+.tb, .ta{
+  width:250px;
 }
+.rb, .cb{
+  padding :10px;
+}
+
 .tb, .ta, .cb, .rb{
-background-color:grey;
-resize:both;
+  background-color:grey;
+  resize:both;
 }
 .lable, .placeholder, .descrptn, .dropdown-type, .dropdown-default, .sampledata, .mancheck{
   display:block;
+  width:250px;
 }
 .textbox{
   resize:both;
@@ -112,7 +124,7 @@ resize:both;
 .container{
   width:100%;
   display:block;
-  margin-left:60px;
+  margin:30px;
 }
 lable{
   font-weight: bold;

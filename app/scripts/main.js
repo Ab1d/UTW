@@ -15,11 +15,6 @@
             return false;
          }
 
- function get_pos(ev){
-           pos = [ev.pageX, ev.pageY];
-           console.log(pos[0]+":"+pos[1]);
-}
-
  var dynamicId = 0;
  var left=0;
  var right= 0;
@@ -43,12 +38,9 @@
  $(".annotate").hide();
 });
 
-var pos;
 var jsonObj = [];
 function createJSON() {
-   var jsonObj = [];
-    $('#'+dynamicId).each(function() {
-
+        $('#'+dynamicId).each(function() {
         var lable = $(".lable").val();
         var palceholder = $(".placeholder").val();
         var description = $(".descrptn").val();
@@ -57,9 +49,9 @@ function createJSON() {
         var sampleData = $(".sampledata").val();
         var mandatoryCheck = $(".mancheck").is(':checked');
         var item = {}
-        item ["id"] = dynamicId;
-        item ["elementPos-X"] = left;
-        item ["elementPos-Y"] = right;
+        item ["myId"] = dynamicId;
+        item ["xPos"] = left;
+        item ["yPos"] = right;
         item ["lable"] =lable;
         item ["palceholder"] = palceholder;
         item ["description"] = description;
@@ -73,6 +65,15 @@ function createJSON() {
     });
 
     console.log(jsonObj);
+}
+function getItems(){
+for(var i in jsonObj){
+var data = $('#'+jsonObj[i].myId).replaceWith('<h4 id='+jsonObj[i].myId+'>'+jsonObj[i].sampleData+'</h4>');
+$('#'+jsonObj[i].myId).css("position","absolute");
+$('#'+jsonObj[i].myId).css("left",jsonObj[i].xPos);
+$('#'+jsonObj[i].myId).css("top",jsonObj[i].yPos);
+$('#'+jsonObj[i].myId).css("color", "orange");
+}
 }
 
 
