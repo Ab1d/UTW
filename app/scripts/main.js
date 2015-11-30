@@ -41,7 +41,7 @@ function dragDrop(ev) {
 }
 var jsonObj = [];
 function createJSON() {
-  $('#'+dynamicId).each(function() {
+  $(jsonObj).each(function() {
     var lable = $(".lable").val();
     var palceholder = $(".placeholder").val();
     var description = $(".descrptn").val();
@@ -78,7 +78,8 @@ function getItems(){
 }
 function editItem(){
   for(var i in jsonObj){
-    item["lable"] =  $(".lable").val(jsonObj[i].lable);
+    $('#'+jsonObj[i].myId).each(function()
+       item["lable"] =  $(".lable").val(jsonObj[i].lable);
     item["placeholder"] =  $(".placeholder").val(jsonObj[i].placeholder);
     item["description"] = $(".descrptn").val(jsonObj[i].descrptn);
     item["selectedType"] =  $(".dropdown-type :selected").text(jsonObj[i].selectedType);
@@ -86,6 +87,8 @@ function editItem(){
     item["sampleData"]  $(".sampledata").val(jsonObj[i].sampleData);
     jsonObj.push(item);
     alert("successfully updated !!");
+      );
+
   }
 }
 function deleteForm(){
