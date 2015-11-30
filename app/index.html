@@ -8,78 +8,93 @@
   <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="styles/main.css">
 </head>
-  <body>
-      <div class="container">
-        <div class="header">
-          <ul class="nav nav-pills pull-right">
-            <!-- <li><a href="#">DELETE</a></li> -->
-            <li class="active"><a onClick="createJSON()">SAVE</a></li>
-            <!-- <li><a href="#">CANCEL</a></li> -->
-            <li><a onClick="getItems()">PREVIEW</a></li>
-          </ul>
-          <h3 class="text-muted">utilitworx</h3>
-        </div>
-        <!-- main content -->
-        <div class="main-container">
-          <div class="left-container"  ondragenter="dragEnter(event)"
-          ondrop="dragDrop(event)"
-          ondragover="dragOver(event)">
-        </div>
-        <!-- sidebar -->
-        <div id="sidebar">
-          <div class="input-group">
-            <form>
-             <input rows="1" id="drag1" class="tb"  placeholder="TextBox" draggable="true"
-             ondragstart="dragStart(event)"></input>
-             <br>
-             <input type="checkbox" id="drag2" class="cb" draggable="true"
-             ondragstart="dragStart(event)"> Check Box
-             <br>
-             <br>
-             <input type="radio"  id="drag3" class="rb"  draggable="true"
-             ondragstart="dragStart(event)"> Radio Button
-             <br>
-             <br>
-             <textarea rows="3" id="drag4" class="ta" placeholder="TextArea" draggable="true"
-             ondragstart="dragStart(event)"></textarea>
-           </form>
-         </div>
+<body>
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li class="active"><a onClick="createJSON(); this.form.reset();">SAVE</a></li>
+        <!-- <li><a href="#">CANCEL</a></li> -->
+        <li><a onClick="getItems()">PREVIEW</a></li>
+        <!-- <li><a onClick="generateHtml()">HTML</a></li> -->
+        <li><a onClick="deleteForm()">DELETE</a></li>
+      </ul>
+      <h3 class="text-muted">utilitworx</h3>
+    </div>
+    <!-- main content -->
+    <div class="main-container">
+      <div class="left-container"  ondragenter="dragEnter(event)"
+      ondrop="dragDrop(event)"
+      ondragover="dragOver(event)">
+    </div>
+    <div id="htmlform"></div>
+    <!-- sidebar -->
+    <div id="sidebar">
+      <div class="input-group">
+        <form>
+         <input rows="1" id="drag1" class="tb"  placeholder="TextBox" draggable="true"
+         ondragstart="dragStart(event)"></input>
          <br>
-         <div class= "annotate">
-          <lable>Lable :</lable>
-          <input type="text" title="lable" class="lable" placeholder="TextBox">
-          <br>
+         <input type="checkbox" id="drag2" class="cb" draggable="true"
+         ondragstart="dragStart(event)"> Check Box
+         <br>
+         <br>
+         <input type="radio"  id="drag3" class="rb"  draggable="true"
+         ondragstart="dragStart(event)"> Radio Button
+         <br>
+         <br>
+         <textarea rows="3" id="drag4" class="ta" placeholder="TextArea" draggable="true"
+         ondragstart="dragStart(event)"></textarea>
+       </form>
+     </div>
+     <br>
+     <div class= "annotate">
+       <form>
+        <lable>Lable :</lable>
+        <input type="text" title="lable" class="lable" placeholder="TextBox">
+        <br>
+        <div class="ph">
           <lable>Placeholder :</lable>
-          <input type="text" title="placeholder"  class="placeholder" placeholder="TextBox">
-          <br>
+          <input type="text" title="placeholder" id="pHolder" class="placeholder" placeholder="TextBox">
+        </div>
+        <br>
+        <div class="dc">
           <lable>Description :</lable>
-          <input type="text" title="description" class="descrptn" placeholder="TextBox">
-          <br>
+          <input type="text" title="description" id="dTion" class="descrptn" placeholder="TextBox">
+        </div>
+        <br>
+        <div class="type">
           <lable>Type :</lable>
           <select class="dropdown-type">
             <option value="1">Date</option>
             <option value="2">Number</option>
             <option value="3">String</option>
           </select>
-          <br>
+        </div>
+        <br>
+        <div class="default">
           <lable>Default Value (Optional) :</lable>
           <select class="dropdown-default">
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </select>
-          <br>
-          <lable>Sample Data :</lable>
-          <input type="text" title="sampledata" class="sampledata" placeholder="TextBox">
-          <br>
-          <lable>Mandatory Field :</lable>
-          <input type="checkbox" class="mancheck">
         </div>
-      </div>
+        <br>
+        <lable>Sample Data :</lable>
+        <input type="text" title="sampledata" class="sampledata" placeholder="TextBox">
+        <br>
+        <lable>Mandatory Field :</lable>
+        <input type="checkbox" class="mancheck">
+        <br>
+        <input type ="button" value="submit" onClick="createJSON(); this.form.reset();" />
+        <!-- <input type="button" value="Reset Form" onClick="this.form.reset()" /> -->
+      </form>
     </div>
-    </div>
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="scripts/main.js"></script>
-  </body>
+  </div>
+</div>
+</div>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="scripts/main.js"></script>
+</body>
 </html>
