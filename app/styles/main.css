@@ -25,42 +25,7 @@ body {
   padding:0 0 0 55px;
 
 }
-#projectLocation{
-  position: absolute;
-  margin-top: 86px;
-  margin-left: 300px;
-  font-weight: bold;
-  color:orange;
 
-}
-#owner{
-  position:absolute;
-  margin-top: 115px;
-  margin-left: 300px;
-  font-weight: bold;
-  color:orange;
-}
-#address{
-  position:absolute;
-  margin-top: 145px;
-  margin-left: 300px;
-  font-weight: bold;
-  color:orange;
-}
-#state{
-  position:absolute;
-  margin-top:175px;
-  margin-left:300px;
-  font-weight:bold;
-  color:orange;
-}
-#phone{
-  position:absolute;
-  margin-top:205px;
-  margin-left:170px;
-  font-weight:bold;
-  color:orange;
-}
 .left-container{
   width:696px;
   height:850px;
@@ -197,26 +162,4 @@ lable{
   }
 }
 
-/*CSS for dragula*/
-.gu-mirror {
-  position: fixed !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
-}
-.gu-hide {
-  display: none !important;
-}
-.gu-unselectable {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-}
-.gu-transit {
-  opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-}
+

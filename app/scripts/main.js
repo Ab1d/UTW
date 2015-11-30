@@ -1,3 +1,6 @@
+$( document ).ready(function() {
+ $(".annotate").hide();
+});
  function dragStart(ev) {
             ev.dataTransfer.effectAllowed='move';
             ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
@@ -34,9 +37,6 @@
             $(".annotate").show();
             return false;
          }
- $( document ).ready(function() {
- $(".annotate").hide();
-});
 
 var jsonObj = [];
 function createJSON() {
@@ -72,7 +72,9 @@ var data = $('#'+jsonObj[i].myId).replaceWith('<h4 id='+jsonObj[i].myId+'>'+json
 $('#'+jsonObj[i].myId).css("position","absolute");
 $('#'+jsonObj[i].myId).css("left",jsonObj[i].xPos);
 $('#'+jsonObj[i].myId).css("top",jsonObj[i].yPos);
-$('#'+jsonObj[i].myId).css("color", "orange");
+$('#'+jsonObj[i].myId).css("margin","0 auto");
+// $('#'+jsonObj[i].myId).css("color", "orange");
+$('#'+jsonObj[i].myId).css("border","solid 1px orange");
 }
 }
 
